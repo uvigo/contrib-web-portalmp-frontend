@@ -1,0 +1,168 @@
+// --
+// Post article
+// -------------------
+
+// article.type-post
+// article.hentry
+
+/* stylelint-disable selector-no-qualifying-type, selector-max-type  */
+
+article.hentry {
+  header {
+    margin-bottom: 1rem;
+  }
+
+  .entry-excerpt {
+    @extend .h3;
+
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: $primary;
+
+    p {
+      @extend .h3;
+
+      margin-bottom: 0;
+      color: inherit;
+    }
+
+    & + .tag-list {
+      padding-top: 0;
+    }
+  }
+
+  .entry-thumbnail {
+    margin-bottom: 1.25rem;
+  }
+
+  .entry-meta {
+    margin-bottom: 1rem;
+
+    p {
+      display: inline-block;
+      margin: 0;
+      font-size: $h6-font-size;
+      font-weight: 300;
+      color: $gray-500;
+      text-transform: uppercase;
+
+      &::after {
+        content: "/";
+      }
+    }
+
+    a {
+      font-size: $h6-font-size;
+      font-weight: 300;
+      color: $gray-500;
+      text-transform: uppercase;
+    }
+
+    time {
+      display: inline-block;
+      font-size: $h6-font-size;
+      font-weight: 300;
+      color: $gray-500;
+      text-transform: uppercase;
+    }
+
+    .entry-type {
+      display: inline-block;
+      margin: 0;
+      font-size: $h6-font-size;
+      font-weight: 300;
+      color: $gray-500;
+      text-transform: uppercase;
+    }
+  }
+
+  h1 {
+    @extend .h2;
+
+    margin-bottom: 2.25rem;
+  }
+
+  p {
+    @extend .paragraph;
+
+    margin-bottom: 1.75rem;
+
+    a {
+      font-weight: 500;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  h2 {
+    @extend .h3;
+
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    @extend .h4;
+
+    margin-bottom: .875rem;
+  }
+
+  h4 {
+    @extend .h5;
+
+    margin-bottom: .625rem;
+  }
+
+  ul {
+    li {
+      @extend .paragraph;
+    }
+  }
+
+  ol {
+    li {
+      @extend .paragraph;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  .nav-tabs {
+    margin-top: 1rem;
+  }
+
+  .tab-content {
+    padding: 1.5625rem 0 2.5rem;
+  }
+
+  table {
+    @extend .table-content !optional;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-left: -20px;
+    }
+  }
+}
+
+/* stylelint-enable */

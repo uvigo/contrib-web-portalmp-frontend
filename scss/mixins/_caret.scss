@@ -1,0 +1,63 @@
+@mixin caretuvigo-down {
+  content: "3";
+}
+
+@mixin caretuvigo-up {
+  content: "2";
+}
+
+@mixin caretuvigo-right {
+  position: relative;
+  top: .121em;
+  content: "5";
+}
+
+@mixin caretuvigo-left {
+  position: relative;
+  top: .121em;
+  content: "4";
+}
+
+@mixin caretuvigo($direction: down) {
+  &::after {
+    @include eleganticon;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-top: -.625em;
+    margin-right: .5em;
+    margin-left: .625em;
+    font-size: 1.3em;
+    vertical-align: -.15em;
+    @if $direction == down {
+      @include caretuvigo-down;
+    } @else if $direction == up {
+      @include caretuvigo-up;
+    } @else if $direction == right {
+      @include caretuvigo-right;
+    }
+  }
+
+  @if $direction == left {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      @include eleganticon;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-top: -.625em;
+      margin-right: 1.25em;
+      margin-left: -.5em;
+      font-size: 1.3em;
+      vertical-align: -.15em;
+      @include caretuvigo-left;
+    }
+  }
+
+  &:empty::after {
+    margin-left: 0;
+  }
+}

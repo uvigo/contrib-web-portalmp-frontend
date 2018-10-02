@@ -1,0 +1,22 @@
+// ----
+// Breadcrumb Layout
+// -------------------
+
+.breadcrumb-nav {
+  // display: none;
+  // order: 2;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    flex-basis: 100%;
+    // order: 1;
+
+    .content > & {
+      padding-right: ($grid-gutter-width / 2);
+      padding-left: ($grid-gutter-width / 2);
+    }
+  }
+}

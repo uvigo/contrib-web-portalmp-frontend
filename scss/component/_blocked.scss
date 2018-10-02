@@ -1,0 +1,41 @@
+//
+// Blocked column
+//
+
+.blocked {
+  width: 100%;
+
+  .blocked__row {
+    margin-bottom: 3.75rem;
+  }
+
+  .blocked__colleft {
+    margin-bottom: 1.875rem;
+  }
+
+
+  @include media-breakpoint-up(lg) {
+    .blocked__row {
+      @include make-row();
+      margin-right: -($grid-gutter-width / 2);
+      margin-left: -($grid-gutter-width / 2);
+    }
+
+    .blocked__col {
+      @include make-col(6, $grid-columns);
+      // padding-right: ($grid-gutter-width / 2);
+      // padding-left: ($grid-gutter-width / 2);
+    }
+
+    .blocked__colleft {
+      padding-right: ($grid-gutter-width / 2);
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .blocked__colright {
+      padding-right: 0;
+      padding-left: ($grid-gutter-width / 2);
+    }
+  }
+}

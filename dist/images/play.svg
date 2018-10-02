@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="YouTube_Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 210 148" style="enable-background:new 0 0 210 148;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{opacity:0.12;fill:#420000;enable-background:new    ;}
+	.st2{fill:url(#SVGID_1_);}
+</style>
+<path id="Triangle" class="st0" d="M83.3,101.2L140,71.8L83.3,42.2V101.2z"/>
+<path id="The_Sharpness" class="st1" d="M83.3,42.2L133,75.4l7-3.6L83.3,42.2z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="105" y1="-697" x2="105" y2="-549" gradientTransform="matrix(1 0 0 1 0 697)">
+	<stop  offset="0" style="stop-color:#E52D27"/>
+	<stop  offset="1" style="stop-color:#BF171D"/>
+</linearGradient>
+<path class="st2" d="M207.9,31.9c0,0-2.1-14.5-8.3-20.9c-8-8.4-16.9-8.4-21-8.9C149.1,0,105,0,105,0H105c0,0-44.1,0-73.5,2.1
+	c-4.1,0.5-13.1,0.5-21,8.9c-6.3,6.4-8.3,20.9-8.3,20.9S0,48.9,0,66v16c0,17,2.1,34,2.1,34s2.1,14.5,8.3,20.9c8,8.4,18.5,8.1,23.2,9
+	c16.8,1.6,71.4,2.1,71.4,2.1s44.1-0.1,73.5-2.2c4.1-0.5,13.1-0.5,21-8.9c6.3-6.4,8.3-20.9,8.3-20.9s2.1-17,2.1-34V66
+	C210,48.9,207.9,31.9,207.9,31.9z M83.3,101.3V42.2l56.7,29.7L83.3,101.3z"/>
+</svg>

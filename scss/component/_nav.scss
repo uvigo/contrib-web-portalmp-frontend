@@ -1,0 +1,323 @@
+// --
+// Navigation
+// -------------------
+
+// .nav {
+//   margin-right: -($nav-link-padding-x);
+// }
+
+// .nav-item {
+//   font-family: $font-family-serif;
+//   font-size: 1.125rem;
+// }
+
+//
+// Nav Primary
+//
+
+/* stylelint-disable selector-max-class, selector-max-compound-selectors */
+
+.nav-primary {
+  @include make-container-max-widths();
+
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+
+  & > div {
+    padding: 1rem 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    & > div {
+      padding-right: ($grid-gutter-width / 2);
+      padding-left: ($grid-gutter-width / 2);
+    }
+  }
+
+  .fill-menu {
+    display: none;
+  }
+
+  .nav-item {
+    font-family: $font-family-sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $white;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: .375rem 1.625rem .375rem 1.5rem;
+    color: inherit;
+
+    &::before {
+      @include eleganticon();
+
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      margin-top: -(1.5rem / 2);
+      font-size: 1.5rem;
+      content: "\35";
+    }
+  }
+
+  .sub-menu {
+    display: none;
+
+    .sub-menu {
+      display: none;
+    }
+  }
+
+  .nav {
+    flex-direction: column;
+    margin: 0;
+
+    & > .nav-item {
+      &.current-page-ancestor {
+        & > .nav-link {
+          // color: $gray-400;
+          background-color: $gray-200;
+          border-color: $primary;
+          transition: none;
+        }
+      }
+
+      &.active {
+        padding-bottom: .625rem;
+
+        & > .nav-link {
+          color: $gray-400;
+          background-color: $primary;
+          border-color: $primary;
+        }
+
+        .sub-menu {
+          display: block;
+          padding: 0;
+          margin: 0 0 0 1.125rem;
+          list-style-type: none;
+
+          .sub-menu {
+            display: none;
+          }
+
+          .nav-item {
+            font-size: .875rem;
+            font-weight: 300;
+          }
+
+          .nav-link {
+            padding: .5rem 1.625rem .5rem 1.5rem;
+
+            &::before {
+              left: 0;
+              margin-top: -.7rem;
+              font-size: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    text-align: right;
+    // margin-right: ($grid-gutter-width / 2);
+
+    & > div {
+      padding: 0;
+    }
+
+    .fill-menu {
+      display: block;
+      width: 100%;
+      border-top: 10px solid $gray-200;
+    }
+
+    .nav-item {
+      font-size: 1.3125rem;
+      color: $primary;
+    }
+
+    .nav-link {
+      padding: .75rem 1.625rem 1.25rem 1.25rem;
+      color: inherit;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .nav {
+      flex-flow: row nowrap;
+      margin: 0;
+
+      & > .nav-item {
+        margin-left: .75rem;
+
+        & > .nav-link {
+          white-space: nowrap;
+          border-top: 10px solid $gray-200;
+          transition: background-color .3s linear .3s, color .3s linear .3s, border-color .3s linear .3s;
+        }
+
+        &.active {
+          padding-bottom: 0;
+
+          & > .nav-link {
+            color: $gray-400;
+            background-color: $primary;
+            border-color: $primary;
+            transition: background-color .3s linear 0s, color .3s linear 0s, border-color .3s linear 0s;
+          }
+
+          .sub-menu {
+            max-height: 400px;
+            margin: 0;
+            transition: max-height .5s linear 0s;
+
+            .nav-item {
+              font-size: 1rem;
+              font-weight: 300;
+            }
+
+            .nav-link {
+              padding: 1rem 1.25rem .875rem 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .sub-menu {
+      position: absolute;
+      z-index: 100;
+      display: block;
+      min-width: 320px;
+      max-height: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      text-align: left;
+      list-style-type: none;
+      background-color: $primary;
+      transition: max-height .3s linear 0s;
+
+      .sub-menu {
+        display: none;
+      }
+
+      .nav-link {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-item {
+        position: relative;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        font-size: 1rem;
+        line-height: 1;
+        color: $white;
+        border-bottom: 1px solid $white;
+
+        &::before {
+          @include eleganticon();
+
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -(1.375rem / 1.75);
+          font-size: 1.375rem;
+          content: "\35";
+        }
+
+        &:first-child {
+          margin-top: 1rem;
+        }
+
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+
+        & .nav-link {
+          padding: 1rem 1.25rem .875rem 2rem;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable */
+
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  position: relative;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  // border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+  border-bottom: none;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: $nav-tabs-border-width;
+    left: 0;
+    z-index: 5;
+    height: 1px;
+    content: "";
+    background-color: $nav-tabs-border-color;
+  }
+
+  .nav-item {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0;
+  }
+
+  .nav-link {
+    padding: .625rem 1.5625rem;
+    font-weight: 400;
+    color: $gray-500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    border: none;
+    border-bottom: 3px solid transparent;
+    // border: $nav-tabs-border-width solid transparent;
+    border-radius: 0;
+
+    @include hover-focus {
+      color: $secondary;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}

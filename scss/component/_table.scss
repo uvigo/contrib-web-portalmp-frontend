@@ -1,0 +1,101 @@
+// --
+// Content table
+// -------------------
+
+.table-content {
+  width: 100%;
+  border-collapse: collapse;
+
+  td,
+  th {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  th {
+    position: relative;
+    padding: 28px 20px;
+    font-weight: 400;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    border-bottom: 2px solid $gray-300;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 2px;
+      height: 20px;
+      content: "";
+      background: $gray-300;
+    }
+  }
+
+  td {
+    padding: 20px;
+    font-weight: 300;
+    color: $gray-900;
+    vertical-align: top;
+    border-bottom: 2px solid $gray-300;
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  /* Force table to not be like tables anymore */
+  .table-content {
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead {
+      tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+    }
+
+    tr {
+      border-top: 2px solid $secondary;
+    }
+
+    td {
+      position: relative;
+      padding-right: 0;
+      padding-left: 0;
+      border-top: 1px solid #ececec;
+      border-bottom: none;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &::before {
+        /* Now like a table header */
+        // position: absolute;
+
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        // width: 35%;
+        display: inline-block;
+        padding-right: 0;
+        margin-right: 10px;
+        font-weight: 400;
+        color: $primary;
+        white-space: nowrap;
+        content: attr(data-label) ":";
+        // background-color: #ccc;
+        // float: left;
+      }
+    }
+  }
+}

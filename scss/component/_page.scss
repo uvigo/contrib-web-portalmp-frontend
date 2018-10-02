@@ -1,0 +1,156 @@
+// --
+// Page content
+// -------------------
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.page-thumbnail {
+  margin-bottom: 2.25rem;
+}
+
+/* stylelint-disable selector-no-qualifying-type  */
+
+.page-content {
+  .page-excerpt {
+    @extend .h3;
+
+    margin-top: 0;
+    margin-bottom: 2.25rem;
+    color: $primary;
+
+    p {
+      @extend .h3;
+
+      margin-bottom: 0;
+      color: inherit;
+    }
+  }
+
+  p {
+    @extend .paragraph;
+
+    &.lead {
+      font-size: $lead-font-size;
+      font-weight: $lead-font-weight;
+    }
+
+    margin-bottom: 1.75rem;
+
+    a {
+      font-weight: 500;
+    }
+
+    a.btn {
+      font-weight: 400;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1.75rem;
+  }
+
+  h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  h4 {
+    margin-bottom: .875rem;
+  }
+
+  ul {
+    @extend .list-content;
+
+    margin-bottom: 1.75rem;
+
+    &.list-peak {
+      @extend .list-peak;
+    }
+
+    &.list-columns {
+      @extend .list-columns;
+    }
+
+    a {
+      font-weight: 400;
+      color: $secondary;
+    }
+  }
+
+  ol {
+    margin-bottom: 1.75rem;
+
+    li {
+      margin-bottom: .5rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: $line-height-base;
+      color: $primary;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nav-tabs {
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    .nav-item {
+      padding-left: 0;
+      background-image: none;
+    }
+  }
+
+  .tab-content {
+    padding: 1.5625rem 0 2.5rem;
+  }
+
+  table {
+    @extend .table-content !optional;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-left: -20px;
+    }
+  }
+
+  // Axustes para outros elementos
+  .card {
+    p {
+      margin-bottom: 0;
+    }
+    .list-group {
+      margin-bottom: 1px;
+    }
+  }
+
+  .list-group {
+    .list-group-item {
+      padding: $list-group-item-padding-y $list-group-item-padding-x;
+      // Place the border on the list items and negative margin up for better styling
+      margin-bottom: -$list-group-border-width;
+      background-image: none;
+    }
+  }
+}
+
+/* stylelint-enable */

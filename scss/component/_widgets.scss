@@ -1,0 +1,171 @@
+// --
+// Widgets blocks
+// -------------------
+
+.widgetbox {
+  padding: 1.5rem 1.5rem 1.875rem 1.5rem;
+
+  h3 {
+    @extend .h5;
+    margin-bottom: 1.25rem;
+    color: $gray-500;
+  }
+
+  &.widgetbox-gray {
+    background-color: $gray-200;
+
+    h3 {
+      color: $gray-500;
+    }
+  }
+
+  &.widgetbox-secondary {
+    background-color: $secondary;
+
+    h3 {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+    }
+
+    span {
+      color: $white;
+    }
+
+    .textwidget {
+      color: $white;
+    }
+  }
+
+  &.widgetbox-primary {
+    background-color: $primary;
+
+    h3 {
+      color: $white;
+    }
+
+    a {
+      color: $white;
+    }
+
+    span {
+      color: $white;
+    }
+
+    .textwidget {
+      color: $white;
+    }
+  }
+}
+
+.textwidget {
+  p {
+    @extend .paragraph;
+    margin-bottom: 0;
+
+    strong {
+      font-weight: 500;
+    }
+
+    & + p,
+    & + ul {
+      margin-top: 1.25rem;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      @extend .paragraph;
+      position: relative;
+      padding-left: 1.25rem;
+
+      &::before {
+        @include eleganticon;
+        position: absolute;
+        top: -1px;
+        left: -7px;
+        font-size: 1.5rem;
+        content: "5";
+      }
+    }
+  }
+
+  li + li {
+    margin-top: 1rem;
+  }
+}
+
+.widget-news {
+  padding: 0;
+
+  h3 {
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  .post-items {
+    padding-top: 1.5rem;
+    padding-bottom: 1.875rem;
+
+    &.has-thumbnail {
+      padding-top: 0;
+    }
+  }
+
+  .post-item + .post-item {
+    padding-top: 2.5rem;
+  }
+
+  .post-title {
+    padding: 0 1.5rem;
+  }
+
+  .post-date {
+    padding: 0 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .post-link {
+    display: block;
+  }
+
+  .post-thumbnail {
+    margin-bottom: 1.25rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .post-excerpt {
+    padding: 1.25rem 1.5rem 0;
+    font-weight: 300;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &.widgetbox-secondary {
+    .post-title,
+    .post-excerpt,
+    .post-date {
+      color: $white;
+    }
+  }
+
+  &.widgetbox-primary {
+    .post-title,
+    .post-excerpt,
+    .post-date {
+      color: $white;
+    }
+  }
+}
+

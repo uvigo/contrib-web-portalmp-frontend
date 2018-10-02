@@ -1,0 +1,62 @@
+// ---
+// Accordion
+// ----------------------
+
+.accordion {
+  .card {
+    background-color: transparent;
+    border: none;
+
+    & + .card {
+      margin-top: 1.25rem;
+    }
+  }
+
+  .card-header {
+    padding: 0;
+    font-size: $h2-font-size;
+    font-weight: 100;
+    color: $gray-700;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: none;
+
+    a {
+      position: relative;
+      display: block;
+      padding: 1rem 0 1rem 2.25rem;
+      color: $primary;
+      border-bottom: 1px solid $primary;
+
+      &::before {
+        @include eleganticon;
+
+        position: absolute;
+        top: 1.25rem;
+        left: 0;
+        color: $primary;
+        content: "2";
+      }
+
+      &:hover {
+        color: $primary;
+        text-decoration: none;
+        border-color: $primary;
+      }
+    }
+
+    .collapsed {
+      color: $gray-700;
+      border-color: $gray-500;
+
+      &::before {
+        color: $gray-700;
+        content: "3";
+      }
+    }
+  }
+
+  .card-body {
+    padding: 1.25rem 0;
+  }
+}

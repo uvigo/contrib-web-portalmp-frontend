@@ -1,0 +1,120 @@
+// ---
+// Filter
+// ----------------------
+
+.widget-filter {
+  padding: 0;
+  background-color: transparent;
+}
+
+// .widget-filter__form {}
+
+.widget-filter__title {
+  padding: 1rem;
+  color: $primary;
+  border-bottom: 1px solid $primary;
+}
+
+.widget-filter__search {
+  position: relative;
+  border: 1px solid $primary;
+
+  .form-control {
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 10px;
+    padding: .25rem 1rem;
+    background: transparent;
+    border: none;
+
+    &::before {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.widget-filter__block {
+  padding-bottom: .625rem;
+  border-bottom: 1px solid $primary;
+}
+
+.widget-filter__block__title {
+  position: relative;
+  padding: 1rem 1rem .75rem 2rem;
+  color: $gray-400;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    left: .5rem;
+    font-size: 1.25rem;
+  }
+}
+
+.widget-filter__content {
+  label {
+    color: $primary;
+  }
+
+  .form-check {
+    padding-top: .375rem;
+    padding-right: .875rem;
+    padding-bottom: .375rem;
+    padding-left: 2.625rem;
+  }
+}
+
+.widget-filter__dates {
+  padding-left: .75rem;
+  margin-bottom: .625rem;
+
+  .form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    padding-left: .5rem;
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  label {
+    margin: 0;
+    margin-right: .25rem;
+  }
+
+  .widget-filter__dates__icon {
+    position: relative;
+    top: -1px;
+    margin-right: .625rem;
+    font-size: 1.125rem;
+  }
+}
+
+.widget-filter__taxonomy {
+  margin-bottom: .625rem;
+}

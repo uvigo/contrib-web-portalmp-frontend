@@ -1,0 +1,217 @@
+// ----
+// Footer
+// ---------------
+
+.footer-alt-menu {
+  margin: 30px 0 20px 0;
+
+  ul {
+    padding: 0;
+    margin: 0 0 0 20px;
+
+    li {
+      display: inline-block;
+      padding-left: 8px;
+      margin-left: 6px;
+      font-family: $font-family-sans-serif;
+      font-size: .6875rem;
+      font-weight: 400;
+      line-height: 1.36364em;
+      letter-spacing: 1px;
+      border-left: 1px solid #b2b2b2;
+
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+        border: none;
+      }
+    }
+
+    a {
+      padding: 0;
+      color: #b2b2b2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.uvigo-footer {
+  padding: 40px 0 60px 0;
+  margin: 0 0 0 0;
+  color: $white;
+  background-color: $primary;
+
+  @include media-breakpoint-up(md) {
+    padding: 40px 0 30px 0;
+  }
+
+  .logo-uvigo {
+    max-width: 210px;
+    margin-left: -1.25rem;
+  }
+
+  .textwidget {
+    margin: 15px 0 15px 0;
+    font-weight: 300;
+
+    p {
+      position: relative;
+      margin: 0 0 2px 1.25rem;
+      font-size: 1rem;
+      font-weight: 100;
+      // line-height: 1.5;
+      color: $white;
+    }
+
+    .elegant-icon {
+      position: absolute;
+      top: 0;
+      left: -24px;
+      font-size: 1.25rem;
+      color: $white;
+    }
+
+    a {
+      font-weight: 100;
+      color: $white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      strong {
+        color: inherit;
+      }
+    }
+
+    strong {
+      display: block;
+      font-weight: inherit;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    // .facebook,
+    // .twitter,
+    // .instagram,
+    // .youtube {
+    //   background-size: 28px;
+    //   height: 28px;
+    //   margin: 0 13px 0 0;
+    //   width: 28px;
+    // }
+    // .facebook {
+    //   margin-left: -20px;
+    // }
+
+    .footer-showmore {
+      padding: 30px 0 0 0;
+      font-size: .875rem;
+      cursor: pointer;
+      border-top: 1px solid $secondary;
+
+      .footer-showmore-open {
+        position: relative;
+        display: block;
+
+        &::before {
+          position: relative;
+          top: 2px;
+          margin-right: 5px;
+          font-size: 1.125rem;
+        }
+      }
+
+      .footer-showmore-close {
+        display: none;
+
+        &::before {
+          position: relative;
+          top: 2px;
+          margin-right: 5px;
+          font-size: 1.125rem;
+        }
+      }
+
+      // &.active {
+      //   .footer-showmore-open {
+      //     display: none;
+      //   }
+      //   .footer-showmore-close {
+      //     display: block;
+      //   }
+      // }
+    }
+  }
+
+  .footer-showmore-container {
+    width: 100%;
+    max-height: 0;
+    padding: 0 15px 0 20px;
+    overflow: hidden;
+    transition: all .3s;
+
+    &.active {
+      max-height: 1000px;
+      transition: all .1s;
+    }
+  }
+
+  .widget_nav_menu {
+    @extend .footer-alt-menu;
+  }
+
+  .toggle-footer {
+    text-align: right;
+
+    span {
+      position: relative;
+      padding-left: 1.5rem;
+      font-size: .875rem;
+      font-weight: 300;
+      cursor: pointer;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1rem;
+      }
+
+      &::before {
+        @include eleganticon();
+
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        font-size: 1.625rem;
+        content: "3";
+      }
+    }
+
+    .toggle-open {
+      &::before {
+        content: "3";
+      }
+    }
+
+    .toggle-close {
+      display: none;
+
+      &::before {
+        content: "2";
+      }
+    }
+  }
+
+  .expanded-footer {
+    display: none;
+  }
+}
+
+@media print {
+  .uvigo-footer {
+    display: none;
+  }
+}

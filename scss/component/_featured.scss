@@ -1,0 +1,85 @@
+//
+// Featured cards
+//
+
+.featured__item {
+  &.card {
+    border: none;
+
+    .featured__item__title {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+
+    .featured__item__date {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: .625rem;
+      color: $primary;
+
+      &::before {
+        @include eleganticon;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        font-size: 1.25rem;
+        color: inherit;
+        content: "\7d";
+      }
+    }
+
+    .featured__item__place {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: .625rem;
+      color: $primary;
+
+      &::before {
+        @include eleganticon;
+        position: absolute;
+        left: 1px;
+        font-size: 1.25em;
+        color: inherit;
+        content: "\e01d";
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .card-body {
+      p {
+        margin-bottom: 0;
+        font-weight: 300;
+
+        a {
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.featured__item--noback {
+  &.card {
+    .card-body {
+      padding-top: ($card-spacer-x * 1.5);
+      padding-right: 0;
+      padding-bottom: ($card-spacer-x * 1.5);
+      padding-left: 0;
+    }
+  }
+}
+
+.featured__item__group {
+  margin-bottom: 1.25rem;
+}

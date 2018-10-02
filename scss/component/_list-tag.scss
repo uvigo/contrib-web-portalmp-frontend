@@ -1,0 +1,57 @@
+//
+// Tags
+//
+
+.tag-list {
+  padding: .625rem 0;
+
+  & + .tag-list {
+    padding-top: 0;
+  }
+
+  & > span {
+    display: inline-block;
+    font-size: $h6-font-size;
+    font-weight: 300;
+    color: $gray-500;
+    text-transform: uppercase;
+
+    &::before {
+      @include eleganticon;
+
+      position: relative;
+      top: 1px;
+      margin-right: .375rem;
+      font-size: .875rem;
+      content: "\e017";
+    }
+
+    &::after {
+      margin-right: .375rem;
+      content: ":";
+    }
+  }
+
+  ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .tag-list__item {
+    display: inline-block;
+    padding: 0;
+    margin: 0 .5rem 0 0;
+    font-size: $h6-font-size;
+    font-weight: 300;
+    color: $gray-500;
+    text-transform: uppercase;
+
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+  }
+}

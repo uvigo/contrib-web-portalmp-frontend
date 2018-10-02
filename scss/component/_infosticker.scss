@@ -1,0 +1,41 @@
+// ---
+// Sticker info
+// ----------------------
+
+.infosticker {
+  display: inline-block;
+  width: 240px;
+  margin-bottom: 1.75rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+.infosticker__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  font-size: 100px;
+  color: $white;
+  background-color: $primary;
+  border-radius: 50%;
+
+  &.elegant-icon-font {
+    font-size: 72px;
+  }
+}
+
+.infosticker__quantity {
+  font-size: 3.125rem;
+  font-weight: 100;
+  color: $secondary;
+  text-transform: uppercase;
+}
+
+.infosticker__content {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}

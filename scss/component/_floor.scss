@@ -1,0 +1,294 @@
+// ---
+// Floor
+// -------------------
+
+.floor {
+  padding: 3.125rem 0 2.5rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 3.75rem 0 3.125rem;
+  }
+
+  .row {
+    justify-content: center;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0 0 1.25rem;
+    font-size: 3.125rem;
+    font-weight: 500;
+    color: $primary;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    margin-bottom: 1.75rem;
+    font-size: $h2-font-size;
+    font-weight: 100;
+    color: $primary;
+    letter-spacing: 1px;
+  }
+
+  p {
+    @extend .paragraph;
+
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    color: $primary;
+  }
+
+  .floor__text {
+    text-align: center;
+  }
+
+  .floor__icon {
+    margin-top: -1.5rem;
+    margin-bottom: .75rem;
+    font-size: 10rem;
+    color: $primary;
+
+    @include media-breakpoint-up(md) {
+      font-size: 14rem;
+    }
+  }
+
+  .floor__iconimage {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include media-breakpoint-up(md) {
+      width: 200px;
+      height: 200px;
+    }
+
+    img {
+      height: inherit;
+    }
+  }
+
+  .btn {
+    @extend .btn-primary;
+
+    min-width: 280px;
+    margin-top: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &.primary {
+    background-color: $primary;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $white;
+    }
+
+    .floor__icon {
+      color: $white;
+    }
+
+    .btn {
+      @extend .btn-outline-light;
+
+      &:focus,
+      &:hover {
+        color: $light;
+        background-color: $secondary;
+        border-color: $secondary;
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $white;
+    }
+
+    .floor__icon {
+      color: $white;
+    }
+
+    .btn {
+      &:hover,
+      &:focus {
+        border-color: $light;
+      }
+    }
+  }
+
+  &.gray {
+    background-color: $gray-200;
+  }
+
+  &.gallery {
+    padding: 0;
+  }
+
+  .gallery {
+    margin-bottom: 30px;
+  }
+
+  // Floor header, first floor in page
+
+  &.floor-header {
+    position: relative;
+    padding: 0;
+    text-align: left;
+    background-color: $primary;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .floor__icon {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 6rem;
+      color: $white;
+    }
+
+    .floor__image {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 420px;
+
+      @include media-breakpoint-up(md) {
+        min-height: 510px;
+      }
+    }
+
+    .floor__image__text {
+      display: flex;
+      align-items: center;
+      min-height: 420px;
+      text-align: center;
+      background: rgba($primary, .75);
+
+      @include media-breakpoint-up(md) {
+        min-height: 300px;
+      }
+    }
+
+    .floor__text {
+      padding: 3.125rem 0 2.5rem;
+      color: $white;
+
+      @include media-breakpoint-up(md) {
+        padding: 3.75rem 0 3.125rem;
+      }
+
+      p {
+        color: $white;
+      }
+
+      .btn {
+        @extend .btn-outline-light;
+
+        margin-top: 2.5rem;
+
+        &:focus,
+        &:hover {
+          color: $light;
+          background-color: $secondary;
+          border-color: $secondary;
+        }
+      }
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0 0 1.25rem;
+      font-size: 3.125rem;
+      font-weight: 500;
+      color: $white;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      padding: 0;
+      margin: 0 0 1.25rem;
+      font-size: 1.875rem;
+      font-weight: 100;
+      color: $white;
+      letter-spacing: 1px;
+    }
+  }
+
+  // Floor with columns
+
+  &.floor__layout--columns {
+    .row {
+      @include media-breakpoint-up(md) {
+        margin-right: -30px;
+        margin-left: -30px;
+
+        /* stylelint-disable */
+        & > div[class^="col"] {
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+        /* stylelint-enable */
+      }
+    }
+
+    .floor__text {
+      text-align: center;
+    }
+
+    .floor__iconimage {
+      width: auto;
+      height: auto;
+      border-radius: 0;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .floor__text {
+        text-align: left;
+      }
+
+      .floor__iconimage {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.fixedheight {
+    position: relative;
+    min-height: 320px;
+    background-position: center; // background-attachment: fixed;
+
+    & > .container {
+      top: 53%;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+// @include media-breakpoint-up(sm) {
+// }
+
+// @include media-breakpoint-up(md) {
+// }
+
+// @include media-breakpoint-up(lg) {
+// }
+

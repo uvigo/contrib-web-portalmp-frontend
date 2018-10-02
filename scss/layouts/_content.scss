@@ -1,0 +1,9 @@
+// ---
+// Principal header
+
+.wrap {
+  .content {
+    padding-top: $grid-gutter-width;
+    padding-bottom: ($grid-gutter-width * 1.5);
+  }
+}

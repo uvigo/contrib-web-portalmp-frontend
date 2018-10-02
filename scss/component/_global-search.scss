@@ -1,0 +1,176 @@
+// ---
+// Bloque de busca global
+
+
+// Search form
+// .globalsearch__form2 {
+//   @extend .form-inline;
+//   margin-top: 30px;
+//   margin-bottom: 40px;
+//   overflow: hidden;
+
+//   label {
+//     font-weight: 400;
+//     @extend .form-group;
+//   }
+
+//   .field {
+//     @extend .form-control;
+//     width: 100%;
+//     font-size: 2rem;
+//     border: none;
+//     border-bottom: 1px solid $secondary;
+//     outline: none;
+//     box-shadow: none;
+
+//     &:focus {
+//       box-shadow: none;
+//     }
+//   }
+
+//   .submit {
+//     @extend .btn;
+//     position: relative;
+//     width: 100%;
+//     padding-top: 9px;
+//     // padding-right: ($padding-base-horizontal + 25);
+//     padding-bottom: 9px;
+//     // padding-left: ($padding-base-horizontal + 30);
+//     color: #fff;
+//     text-align: left;
+//     letter-spacing: 1px;
+//     background-color: $primary;
+//     border: 1px solid $secondary;
+
+//     &::before {
+//       top: 7px;
+//     }
+
+//     &:hover {
+//       color: #fff;
+//       background-color: $secondary;
+//     }
+//   }
+// }
+
+// .search-form {
+//   .search-label {
+//       width: 100%;
+//   }
+//   .search-button {
+//       width: 100%;
+//   }
+// }
+
+// @media (min-width: 640px) {
+//   .search-form {
+//       .search-label {
+//           width: 74%;
+//           float: left;
+//           margin-right: 1%;
+//       }
+//       .search-button {
+//           width: 25%;
+//           float: left;
+//       }
+//   }
+// }
+
+.globalsearch {
+  // position: absolute;
+  // top: 51px;
+  // right: 0;
+  // left: 0;
+  // z-index: 1;
+  height: 0;
+  overflow: hidden;
+  background-color: $primary;
+  transition: height .3s;
+
+  &.active {
+    height: 140px;
+
+    .close-button {
+      display: block;
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 22px;
+    display: none;
+    padding: 0;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+
+    &::before {
+      font-size: 3.1rem;
+    }
+  }
+
+  .globalsearch__content {
+    height: 100%;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba($white, .4);
+  }
+
+  .globalsearch__form {
+    display: flex;
+    margin: 0;
+
+    .globalsearch__form__label {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
+
+    .form-control {
+      padding-right: 40px;
+      padding-left: 40px;
+      font-size: 1.375rem;
+      font-weight: 300;
+      color: $white;
+      letter-spacing: 1px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid $gray-400;
+      box-shadow: none;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    .btn {
+      padding-top: 1.05rem;
+      padding-bottom: 1.05rem;
+      margin-left: 20px;
+      border-color: $white;
+    }
+  }
+}
+
+// ---
+// Botón apertura busca
+
+.globalsearch__toggle-button {
+  min-width: 21px;
+  padding: 0;
+  margin-left: 1.25rem;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &::before {
+    font-size: 1.25rem;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $gray-400;
+  }
+}

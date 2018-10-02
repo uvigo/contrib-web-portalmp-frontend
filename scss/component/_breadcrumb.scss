@@ -1,0 +1,22 @@
+// ---
+// Breadcrumb
+// ----------------------
+
+.breadcrumb {
+  border-radius: 0;
+}
+
+.breadcrumb-item {
+  font-size: .75rem;
+  font-weight: 300;
+  color: $gray-500;
+  text-transform: uppercase;
+
+  a {
+    color: $secondary;
+  }
+
+  &.active {
+    color: $breadcrumb-active-color;
+  }
+}

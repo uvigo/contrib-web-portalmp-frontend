@@ -1,0 +1,31 @@
+
+.dropdown-toggle {
+  // Generate the caret automatically
+  @include caretuvigo;
+}
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+// Just add .dropup after the standard .dropdown class and you're set.
+.dropup {
+  .dropdown-toggle {
+    @include caretuvigo(up);
+  }
+}
+
+.dropright {
+  .dropdown-toggle {
+    @include caretuvigo(right);
+    &::after {
+      vertical-align: 0;
+    }
+  }
+}
+
+.dropleft {
+  .dropdown-toggle {
+    @include caretuvigo(left);
+    &::before {
+      vertical-align: 0;
+    }
+  }
+}

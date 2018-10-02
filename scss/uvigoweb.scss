@@ -1,0 +1,16 @@
+/*!
+ * Uvigweb v1.0.0 (https://uvigo.gal/)
+ * Copyright 2018 Universidade de Vigo
+ * Based on Bootstrap (https://getbootstrap.com/)
+ * Licensed under MIT
+ */
+
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "common/variables";
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "../node_modules/contrib-web-portalmp-iconfont/dist/scss/uvigo-iconfont";
+
+@import "component";

@@ -1,0 +1,275 @@
+
+//
+// Galleries
+//
+
+.gallery {
+  .gallery-item {
+    margin: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .gallery-icon {
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+
+    a:focus {
+      outline: none;
+    }
+  }
+
+  .gallery-item-open {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 24 24'><path fill='#eeeeee' d='M23.6,0.5c0.3,0.3,0.4,0.6,0.4,1v20.9c0,0.4-0.1,0.8-0.4,1c-0.3,0.3-0.6,0.4-1.1,0.4h-21c-0.4,0-0.8-0.1-1.1-0.4c-0.3-0.3-0.4-0.6-0.4-1V1.5c0-0.4,0.1-0.8,0.4-1C0.7,0.2,1.1,0,1.5,0h21C22.9,0,23.3,0.2,23.6,0.5zM5.6,19.4l4.7-4.7c0.4-0.3,0.4-0.7,0-1s-0.7-0.3-1.1,0l-4.7,4.7v-4.2c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.1-0.3-0.2-0.5-0.2s-0.4,0.1-0.5,0.2C3.1,13.8,3,14,3,14.2v6c0,0.1,0,0.2,0,0.3c0,0.1,0.1,0.2,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.2s0.2,0,0.3,0h6c0.2,0,0.4-0.1,0.5-0.2c0.1-0.1,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5s-0.3-0.2-0.5-0.2H5.6z M21,3.5c-0.1-0.2-0.2-0.3-0.4-0.4c-0.1,0-0.2,0-0.3,0h-6c-0.2,0-0.4,0.1-0.5,0.2c-0.1,0.1-0.2,0.3-0.2,0.5s0.1,0.4,0.2,0.5s0.3,0.2,0.5,0.2h4.2l-4.7,4.7c-0.4,0.3-0.4,0.7,0,1s0.7,0.3,1.1,0l4.7-4.7v4.2c0,0.2,0.1,0.4,0.2,0.5s0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2S21,9.9,21,9.7v-6C21,3.7,21,3.6,21,3.5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .gallery-item-slider-controls {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    overflow: hidden;
+    color: $white;
+    background-color: $primary;
+  }
+
+  .gallery-item-slider-controls-position {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 55px;
+    background-color: $primary;
+  }
+
+  .gallery-item-slider-counter {
+    width: 120px;
+    padding-left: 1.5rem;
+  }
+
+  .gallery-item-download {
+    position: relative;
+    height: 1rem;
+    padding: 0 1.5rem 0 1.75rem;
+    font-weight: 400;
+    line-height: 1;
+    color: $white;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      @include eleganticon;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -.75rem;
+      font-size: 1.25rem;
+      content: "\e004";
+    }
+  }
+
+  .gallery-item-slider-arrows {
+    display: flex;
+    flex-grow: 1;
+    padding-right: 20px;
+
+    .slick-arrow {
+      position: static;
+      transform: none;
+
+      &.slick-next {
+        width: 1rem;
+        height: 1rem;
+
+        &::before {
+          width: 1rem;
+          height: 1rem;
+          background-image: url("data:image/svg+xml;charset=utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6 11'><path fill='#ffffff' d='M6,5.5C6,5.7,5.9,5.9,5.8,6l-4.6,4.7c-0.3,0.3-0.6,0.3-1,0c-0.3-0.3-0.3-0.7,0-1l4-4.2l-4-4.2C0.1,1.1,0,1,0,0.8c0-0.2,0.1-0.4,0.2-0.5c0.3-0.3,0.6-0.3,1,0L5.8,5C5.9,5.1,6,5.3,6,5.5z'/></svg>");
+          background-size: 1rem 1rem;
+        }
+      }
+
+      &.slick-prev {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 1rem;
+
+        &::before {
+          width: 1rem;
+          height: 1rem;
+          background-image: url("data:image/svg+xml;charset=utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 6 11'><path fill='#ffffff' d='M0,5.5C0,5.3,0.1,5.1,0.2,5l4.6-4.7c0.3-0.3,0.6-0.3,1,0c0.3,0.3,0.3,0.7,0,1l-4,4.2l4,4.2C5.9,9.9,6,10,6,10.2c0,0.2-0.1,0.4-0.2,0.5c-0.3,0.3-0.6,0.3-1,0L0.2,6C0.1,5.9,0,5.7,0,5.5z'/></svg>");
+          background-size: 1rem 1rem;
+        }
+      }
+    }
+  }
+
+  &.gallery-modal {
+    opacity: 0;
+    transition: opacity .2s;
+
+    &.gallery-loaded {
+      opacity: 1;
+      transition: opacity .2s;
+    }
+
+    .gallery-item-slider-controls {
+      right: 0;
+      max-width: 780px;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+
+    .gallery-item-slider-controls-position {
+      max-width: 780px;
+      margin: 0 auto;
+      background-color: transparent;
+    }
+
+    .gallery-item-slider-counter {
+      padding: 0;
+    }
+
+    .gallery-item-info {
+      max-width: 780px;
+      padding-bottom: 0;
+      margin: 0 auto;
+      color: $white;
+
+      .gallery-item-title {
+        margin-bottom: 1rem;
+        color: $white;
+
+        @extend .h3;
+      }
+
+      .gallery-item-caption {
+        font-size: $h6-font-size;
+        color: $white;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-weight: 400;
+        color: $white;
+      }
+    }
+  }
+
+  &.gallery-columns-1 {
+    .gallery-item-info {
+      padding-top: 1rem;
+      padding-right: 1.25rem;
+      padding-left: 1.25rem;
+
+      .gallery-item-title {
+        @extend .h3;
+
+        margin-bottom: 1rem;
+      }
+
+      .gallery-item-caption {
+        font-size: $h6-font-size;
+        color: $gray-500;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.gallery-columns-2 {
+    @include make-row();
+
+    margin-right: -25px;
+    margin-left: -25px;
+
+    .gallery-item {
+      @include make-col-ready;
+      @include make-col(6);
+
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &.gallery-columns-3 {
+    @include make-row();
+
+    margin-right: -25px;
+    margin-left: -25px;
+
+    .gallery-item {
+      @include make-col-ready;
+      @include make-col(4);
+
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .gallery-item-info {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+
+    .gallery-item-title {
+      color: $primary;
+    }
+
+    .gallery-item-caption {
+      font-size: $h6-font-size;
+      color: $gray-500;
+    }
+
+    p {
+      margin-bottom: .75rem;
+      font-weight: 400;
+    }
+  }
+}
+
+// Modal window for gallery
+
+.modal-gallery {
+  .modal-content {
+    color: $white;
+    background-color: transparent;
+    border: none;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: $white;
+  }
+}
