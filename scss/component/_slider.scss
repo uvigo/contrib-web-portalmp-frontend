@@ -1,9 +1,12 @@
 // Slider Home
 
 .uvigo-slide {
+  .slick-slide {
+    height: 540px;
+  }
+
   .uvigo-slide__item {
     position: relative;
-    // width: 1440px;
     width: 100vw;
     height: 540px;
     background-color: #ccc;
@@ -38,8 +41,10 @@
       color: $white;
     }
 
-    a {
-      color: $white;
+    .uvigo-slide__item__content__post__title {
+      a {
+        color: $white;
+      }
     }
 
     h2,

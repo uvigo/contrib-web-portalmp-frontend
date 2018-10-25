@@ -163,6 +163,10 @@
       background-image: url("data:image/svg+xml;charset=utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'><polyline fill='none' stroke='#{$slick-arrow-color}' stroke-width='2' points='1,1 24,25 1,49 '/></svg>");
     }
   }
+
+  // @include media-breakpoint-up($slick-max-width) {
+  //   left: calc(100% - 100px);
+  // }
 }
 
 .slick-next {
