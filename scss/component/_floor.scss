@@ -146,9 +146,6 @@
     padding: 0;
     text-align: left;
     background-color: $primary;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
     .floor__icon {
       margin-top: 0;
@@ -162,6 +159,9 @@
       flex-direction: column;
       justify-content: flex-end;
       min-height: 420px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
 
       @include media-breakpoint-up(md) {
         min-height: 510px;
