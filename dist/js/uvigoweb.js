@@ -4346,15 +4346,15 @@
 
       Slider.initHomeSlider = function initHomeSlider() {
         $$$1('.sliderbehaviour').slick({
-          centerMode: true,
+          // centerMode: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           // dots: true,
-          // infinite: true,
-          cssEase: 'linear',
-          variableWidth: true,
-          variableHeight: true,
-          rows: 0
+          infinite: true // cssEase: 'linear',
+          // variableWidth: true,
+          // variableHeight: true,
+          // rows: 0
+
         });
       };
 

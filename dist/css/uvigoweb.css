@@ -5639,15 +5639,15 @@ button.close {
   align-items: flex-start;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid #eeeeee;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
 .modal-header .close {
-  padding: 1rem;
-  margin: -1rem -1rem -1rem auto;
+  padding: 1rem 1.5rem;
+  margin: -1rem 1.5rem -1rem 1.5rem -1rem 1.5rem auto;
 }
 
 .modal-title {
@@ -12695,6 +12695,10 @@ small,
   opacity: 0.75;
 }
 
+.uvigo-slide .slick-slide {
+  height: 540px;
+}
+
 .uvigo-slide .uvigo-slide__item {
   position: relative;
   width: 100vw;
@@ -12736,7 +12740,7 @@ small,
   color: #fff;
 }
 
-.uvigo-slide .uvigo-slide__item__content a {
+.uvigo-slide .uvigo-slide__item__content .uvigo-slide__item__content__post__title a {
   color: #fff;
 }
 
@@ -13882,6 +13886,11 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
 }
 
 /* stylelint-enable */
+.modal-header .close {
+  padding: 0;
+  margin: 0;
+}
+
 .globalsearch {
   height: 0;
   overflow: hidden;
@@ -15338,9 +15347,6 @@ article.hentry table th {
   padding: 0;
   text-align: left;
   background-color: #073349;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .floor.floor-header .floor__icon {
@@ -15358,6 +15364,9 @@ article.hentry table th {
   -ms-flex-pack: end;
   justify-content: flex-end;
   min-height: 420px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -16660,6 +16669,9 @@ body.activenavigation .menu-container {
 }
 
 .wrap .content .main {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
   margin-bottom: 3.75rem;
 }
 
