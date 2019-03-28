@@ -41,7 +41,7 @@ article.hentry {
     p {
       display: inline-block;
       margin: 0;
-      font-size: $h6-font-size;
+      font-size: $font-size-md;
       font-weight: 300;
       color: $gray-500;
       text-transform: uppercase;
@@ -52,7 +52,7 @@ article.hentry {
     }
 
     a {
-      font-size: $h6-font-size;
+      font-size: $font-size-md;
       font-weight: 300;
       color: $gray-500;
       text-transform: uppercase;
@@ -60,7 +60,7 @@ article.hentry {
 
     time {
       display: inline-block;
-      font-size: $h6-font-size;
+      font-size: $font-size-md;
       font-weight: 300;
       color: $gray-500;
       text-transform: uppercase;
@@ -69,10 +69,26 @@ article.hentry {
     .entry-type {
       display: inline-block;
       margin: 0;
-      font-size: $h6-font-size;
+      font-size: $font-size-md;
       font-weight: 300;
       color: $gray-500;
       text-transform: uppercase;
+    }
+
+    .entry-meta-item {
+      font-size: $font-size-md;
+      font-weight: 300;
+      color: $black;
+      text-transform: none;
+
+      &::after {
+        display: none;
+      }
+
+      a {
+        color: $black;
+        text-transform: none;
+      }
     }
   }
 

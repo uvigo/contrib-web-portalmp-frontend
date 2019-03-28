@@ -123,20 +123,28 @@
     flex: 1 1 0;
     padding: 1rem 0;
     margin: 0 1rem;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 300;
     line-height: 1.4;
     color: $white;
     text-align: center;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
   }
 
   .data-counters__item__counter {
     display: inline-block;
     margin-bottom: 1rem;
-    font-size: 3.125rem;
+    font-size: 2.8rem;
     font-weight: 100;
     line-height: 1;
     text-transform: none;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3.125rem;
+    }
   }
 }
