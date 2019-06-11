@@ -250,7 +250,7 @@
 
       &.current-menu-item,
       &.current-menu-ancestor {
-        ul.children {
+        & > ul.children {
           display: block;
         }
 
@@ -264,12 +264,30 @@
       }
     }
 
+    &.menu-parent {
+      & > .current-menu-item {
+        & > .menu-item-link {
+          color: $white;
+          cursor: default;
+          background-color: $secondary;
+        }
+      }
+    }
+
     // Estilos xerais do menú de fillos
     &.children {
       display: none;
 
       .menu-item-link {
         padding-left: 25px;
+      }
+
+      .children {
+        display: none;
+
+        .menu-item-link {
+          padding-left: 50px;
+        }
       }
 
       .menu-icon-link {
