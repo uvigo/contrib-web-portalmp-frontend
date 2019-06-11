@@ -1,5 +1,5 @@
 /*!
- * Uvigweb v1.0.0 (https://uvigo.gal/)
+ * Uvigoweb v1.1.2 (https://uvigo.gal/)
  * Copyright 2018 Universidade de Vigo
  * Based on Bootstrap (https://getbootstrap.com/)
  * Licensed under MIT
@@ -1854,8 +1854,8 @@ pre code {
   padding: 0.875rem 1rem;
   font-size: 1rem;
   line-height: 1;
-  color: #939393;
-  background-color: #fff;
+  color: #575757;
+  background-color: #fafafa;
   background-clip: padding-box;
   border: 1px solid #939393;
   border-radius: 0;
@@ -1882,22 +1882,27 @@ pre code {
 }
 
 .form-control::-webkit-input-placeholder {
-  color: #939393;
+  color: #b1b1b1;
   opacity: 1;
 }
 
 .form-control::-moz-placeholder {
-  color: #939393;
+  color: #b1b1b1;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #b1b1b1;
   opacity: 1;
 }
 
 .form-control::-ms-input-placeholder {
-  color: #939393;
+  color: #b1b1b1;
   opacity: 1;
 }
 
 .form-control::placeholder {
-  color: #939393;
+  color: #b1b1b1;
   opacity: 1;
 }
 
@@ -1907,8 +1912,8 @@ pre code {
 }
 
 select.form-control:focus::-ms-value {
-  color: #939393;
-  background-color: #fff;
+  color: #575757;
+  background-color: #fafafa;
 }
 
 .form-control-file,
@@ -3514,7 +3519,7 @@ input[type="button"].btn-block {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  color: #939393;
+  color: #575757;
   text-align: center;
   white-space: nowrap;
   background-color: #eeeeee;
@@ -3696,7 +3701,7 @@ input[type="button"].btn-block {
   height: calc(2.75rem + 2px);
   padding: 0.875rem 2.25rem 0.875rem 1rem;
   line-height: 1;
-  color: #939393;
+  color: #575757;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 5'%3E%3Cpath fill='%23073349' d='M5.8,1C6,1.1,6,1.3,5.8,1.5L3.3,4.1C3.2,4.2,3.1,4.2,3,4.2s-0.2,0-0.3-0.1L0.1,1.5C0,1.3,0,1.1,0.1,1s0.4-0.2,0.5,0L3,3.2L5.3,1C5.5,0.8,5.6,0.8,5.8,1z'/%3E%3C/svg%3E") no-repeat right 1rem center;
   background-size: 10px 10px;
@@ -3714,8 +3719,8 @@ input[type="button"].btn-block {
 }
 
 .custom-select:focus::-ms-value {
-  color: #939393;
-  background-color: #fff;
+  color: #575757;
+  background-color: #fafafa;
 }
 
 .custom-select[multiple], .custom-select[size]:not([size="1"]) {
@@ -3790,8 +3795,8 @@ input[type="button"].btn-block {
   height: calc(2.75rem + 2px);
   padding: 0.875rem 1.5rem;
   line-height: 1;
-  color: #939393;
-  background-color: #fff;
+  color: #575757;
+  background-color: #fafafa;
   border: 1px solid #939393;
   border-radius: 0;
 }
@@ -3806,7 +3811,7 @@ input[type="button"].btn-block {
   height: 2.75rem;
   padding: 0.875rem 1.5rem;
   line-height: 1;
-  color: #939393;
+  color: #575757;
   content: "Browse";
   background-color: #eeeeee;
   border-left: 1px solid #939393;
@@ -10723,68 +10728,72 @@ a.text-gray:hover, a.text-gray:focus {
   text-align: center;
 }
 
-.uvigo-iconfont-gear-search::before {
+.uvigo-iconfont-external-link::before {
   content: "\ea01";
 }
 
-.uvigo-iconfont-graph-search::before {
+.uvigo-iconfont-gear-search::before {
   content: "\ea02";
 }
 
-.uvigo-iconfont-halt::before {
+.uvigo-iconfont-graph-search::before {
   content: "\ea03";
 }
 
-.uvigo-iconfont-heart::before {
+.uvigo-iconfont-halt::before {
   content: "\ea04";
 }
 
-.uvigo-iconfont-justice::before {
+.uvigo-iconfont-heart::before {
   content: "\ea05";
 }
 
-.uvigo-iconfont-map::before {
+.uvigo-iconfont-justice::before {
   content: "\ea06";
 }
 
-.uvigo-iconfont-persons::before {
+.uvigo-iconfont-map::before {
   content: "\ea07";
 }
 
-.uvigo-iconfont-program::before {
+.uvigo-iconfont-persons::before {
   content: "\ea08";
 }
 
-.uvigo-iconfont-research-book::before {
+.uvigo-iconfont-program::before {
   content: "\ea09";
 }
 
-.uvigo-iconfont-research-graph::before {
+.uvigo-iconfont-research-book::before {
   content: "\ea0a";
 }
 
-.uvigo-iconfont-research-group::before {
+.uvigo-iconfont-research-graph::before {
   content: "\ea0b";
 }
 
-.uvigo-iconfont-research-people::before {
+.uvigo-iconfont-research-group::before {
   content: "\ea0c";
 }
 
-.uvigo-iconfont-scientific-divulgation::before {
+.uvigo-iconfont-research-people::before {
   content: "\ea0d";
 }
 
-.uvigo-iconfont-slideshow::before {
+.uvigo-iconfont-scientific-divulgation::before {
   content: "\ea0e";
 }
 
-.uvigo-iconfont-speaker::before {
+.uvigo-iconfont-slideshow::before {
   content: "\ea0f";
 }
 
-.uvigo-iconfont-transport::before {
+.uvigo-iconfont-speaker::before {
   content: "\ea10";
+}
+
+.uvigo-iconfont-transport::before {
+  content: "\ea11";
 }
 
 /* stylelint-disable */
@@ -12845,7 +12854,7 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
   flex: 1 1 0;
   padding: 1rem 0;
   margin: 0 1rem;
-  font-size: 1rem;
+  font-size: .8rem;
   font-weight: 300;
   line-height: 1.4;
   color: #fff;
@@ -12853,13 +12862,25 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
   text-transform: uppercase;
 }
 
+@media (max-width: 767.98px) {
+  .data-counters .data-counters__item {
+    font-size: 1rem;
+  }
+}
+
 .data-counters .data-counters__item__counter {
   display: inline-block;
   margin-bottom: 1rem;
-  font-size: 3.125rem;
+  font-size: 2.8rem;
   font-weight: 100;
   line-height: 1;
   text-transform: none;
+}
+
+@media (max-width: 767.98px) {
+  .data-counters .data-counters__item__counter {
+    font-size: 3.125rem;
+  }
 }
 
 .btn {
@@ -13442,11 +13463,11 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
     border-top: 10px solid #eeeeee;
   }
   .nav-primary .nav-item {
-    font-size: 1.3125rem;
+    font-size: 1.25rem;
     color: #073349;
   }
   .nav-primary .nav-link {
-    padding: .75rem 1.625rem 1.25rem 1.25rem;
+    padding: .75rem 1.25rem 1.25rem 1.25rem;
     color: inherit;
   }
   .nav-primary .nav-link::before {
@@ -13865,12 +13886,18 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
   color: #fff;
 }
 
-.sidebar-menu ul li.current-menu-item ul.children, .sidebar-menu ul li.current-menu-ancestor ul.children {
+.sidebar-menu ul li.current-menu-item > ul.children, .sidebar-menu ul li.current-menu-ancestor > ul.children {
   display: block;
 }
 
 .sidebar-menu ul li.current-menu-item .menu-item-link:hover .menu-icon-more::before, .sidebar-menu ul li.current-menu-ancestor .menu-item-link:hover .menu-icon-more::before {
   content: "\0033";
+}
+
+.sidebar-menu ul.menu-parent > .current-menu-item > .menu-item-link {
+  color: #fff;
+  cursor: default;
+  background-color: #809098;
 }
 
 .sidebar-menu ul.children {
@@ -13879,6 +13906,14 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
 
 .sidebar-menu ul.children .menu-item-link {
   padding-left: 25px;
+}
+
+.sidebar-menu ul.children .children {
+  display: none;
+}
+
+.sidebar-menu ul.children .children .menu-item-link {
+  padding-left: 50px;
 }
 
 .sidebar-menu ul.children .menu-icon-link {
@@ -13957,6 +13992,10 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
 }
 
 .globalsearch .globalsearch__form .form-control::-moz-placeholder {
+  color: #fff;
+}
+
+.globalsearch .globalsearch__form .form-control:-ms-input-placeholder {
   color: #fff;
 }
 
@@ -14064,6 +14103,15 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
   color: #809098;
 }
 
+.page-content ul + h2,
+.page-content ul + h3,
+.page-content ul + h4,
+.page-content ul + h5,
+.page-content ul + h6 {
+  display: block;
+  padding-top: 1rem;
+}
+
 .page-content ol {
   margin-bottom: 1.75rem;
 }
@@ -14074,6 +14122,15 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
   font-weight: 400;
   line-height: 1.375;
   color: #073349;
+}
+
+.page-content ol + h2,
+.page-content ol + h3,
+.page-content ol + h4,
+.page-content ol + h5,
+.page-content ol + h6 {
+  display: block;
+  padding-top: 1rem;
 }
 
 .page-content img {
@@ -14152,7 +14209,7 @@ article.hentry .entry-meta {
 article.hentry .entry-meta p {
   display: inline-block;
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #939393;
   text-transform: uppercase;
@@ -14163,7 +14220,7 @@ article.hentry .entry-meta p::after {
 }
 
 article.hentry .entry-meta a {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #939393;
   text-transform: uppercase;
@@ -14171,7 +14228,7 @@ article.hentry .entry-meta a {
 
 article.hentry .entry-meta time {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #939393;
   text-transform: uppercase;
@@ -14180,10 +14237,26 @@ article.hentry .entry-meta time {
 article.hentry .entry-meta .entry-type {
   display: inline-block;
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 300;
   color: #939393;
   text-transform: uppercase;
+}
+
+article.hentry .entry-meta .entry-meta-item {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #000;
+  text-transform: none;
+}
+
+article.hentry .entry-meta .entry-meta-item::after {
+  display: none;
+}
+
+article.hentry .entry-meta .entry-meta-item a {
+  color: #000;
+  text-transform: none;
 }
 
 article.hentry h1 {
@@ -15643,7 +15716,7 @@ button.close {
 }
 
 .form-control:hover {
-  color: #809098;
+  color: #575757;
   border-color: #809098;
   box-shadow: inset 0 -2px 0 #809098;
 }
@@ -15666,7 +15739,7 @@ select.form-control {
   height: calc(2.75rem + 2px);
   padding: 0.875rem 2.25rem 0.875rem 1rem;
   line-height: 1;
-  color: #939393;
+  color: #575757;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 5'%3E%3Cpath fill='%23073349' d='M5.8,1C6,1.1,6,1.3,5.8,1.5L3.3,4.1C3.2,4.2,3.1,4.2,3,4.2s-0.2,0-0.3-0.1L0.1,1.5C0,1.3,0,1.1,0.1,1s0.4-0.2,0.5,0L3,3.2L5.3,1C5.5,0.8,5.6,0.8,5.8,1z'/%3E%3C/svg%3E") no-repeat right 1rem center;
   background-size: 10px 10px;
@@ -15687,8 +15760,8 @@ select.form-control:focus {
 }
 
 select.form-control:focus::-ms-value {
-  color: #939393;
-  background-color: #fff;
+  color: #575757;
+  background-color: #fafafa;
 }
 
 select.form-control[multiple], select.form-control[size]:not([size="1"]) {
@@ -16377,7 +16450,7 @@ article.hentry .custom-block.secondary h4,
 
 .top-header-links li .elegant-icon {
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1.625rem;
 }
 
 .top-header-links li .elegant-icon span {

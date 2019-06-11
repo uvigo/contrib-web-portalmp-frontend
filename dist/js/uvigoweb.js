@@ -1,6 +1,6 @@
 /*!
-  * UVIGOWEB v1.1.0 (undefined)
-  * Copyright 2018-2018 [object Object]
+  * UVIGOWEB v1.1.2 (undefined)
+  * Copyright 2018-2019 [object Object]
   * Licensed under MIT (https://github.com/uvigo/contrib-web-portalmp-frontend/LICENSE)
   */
 (function (global, factory) {
@@ -4866,7 +4866,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * UVIGOWEB (v1.0.0): index.js
+   * UVIGOWEB (v1.1.2): index.js
    * Licensed under MIT
    * --------------------------------------------------------------------------
    */
