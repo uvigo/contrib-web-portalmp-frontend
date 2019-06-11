@@ -89,6 +89,15 @@
       font-weight: 400;
       color: $secondary;
     }
+
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      display: block;
+      padding-top: 1rem;
+    }
   }
 
   ol {
@@ -100,6 +109,15 @@
       font-weight: 400;
       line-height: $line-height-base;
       color: $primary;
+    }
+
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      display: block;
+      padding-top: 1rem;
     }
   }
 
