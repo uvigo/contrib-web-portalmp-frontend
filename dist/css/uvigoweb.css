@@ -99,6 +99,7 @@ abbr[data-original-title] {
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
+  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -14623,6 +14624,7 @@ article.hentry .uvigo-slide .uvigo-slide__item__content h3 {
 
 .btn {
   min-width: 14rem;
+  line-height: 1em;
   text-align: left;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -18090,10 +18092,20 @@ article.hentry .custom-block.secondary h4,
   background-color: #fff;
 }
 
+.banner .logo-uvigo {
+  width: 140px;
+  height: auto;
+}
+
 @media (min-width: 768px) {
   .banner .logo-uvigo {
+    width: 180px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner .logo-uvigo {
     width: 200px;
-    height: auto;
   }
 }
 
@@ -18189,7 +18201,7 @@ article.hentry .custom-block.secondary h4,
   padding-left: 1.625rem;
 }
 
-.top-header-links li .elegant-icon span {
+.top-header-links li .elegant-icon span:first-child {
   position: absolute;
   top: 50%;
   left: 0;
