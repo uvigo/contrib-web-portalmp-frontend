@@ -1,5 +1,8 @@
-const path  = require('path')
-const pkg   = require(path.resolve(__dirname, '../package.json'))
+'use strict'
+
+// const path  = require('path')
+const pkg = require('../package.json')
+// const pkg   = require(path.resolve(__dirname, '../package.json'))
 const year  = new Date().getFullYear()
 
 function getBanner(pluginFilename) {

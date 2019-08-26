@@ -1,3 +1,10 @@
+### 1.2.0: August 26th, 2019
+* Actualización de paquetes de compilación desarrollo.
+* Resolve vulnerabilities.
+* Actualización Bootstrap 4.3.1 y contrib-web-portalmp-iconfont 1.1.2.
+* Ajustar altura de texto de botones.
+* Añadir variable para control del cambio responsive de la cabecera.
+
 ### 1.1.2: June 11th, 2019
 * Solucionado problema de visualización de niveles en submenú.
 * Modificaciones en los colores de los inputs para mejorar visualización.

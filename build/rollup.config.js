@@ -1,3 +1,5 @@
+'use strict'
+
 const path    = require('path')
 const babel   = require('rollup-plugin-babel')
 const resolve = require('rollup-plugin-node-resolve')
@@ -8,7 +10,6 @@ const BUNDLE  = process.env.BUNDLE === 'true'
 let fileDest  = 'uvigoweb.js'
 const external = ['jquery', 'popper.js', 'slick-carousel']
 const plugins = [
-  resolve(),
   babel({
     // FG: Ignore next line because we are compiling node_modules files
     // exclude: 'node_modules/**', // Only transpile our source code
@@ -17,7 +18,7 @@ const plugins = [
       'createClass',
       'inheritsLoose',
       'defineProperty',
-      'objectSpread'
+      'objectSpread2'
     ]
   })
 ]
@@ -38,7 +39,7 @@ if (BUNDLE) {
   plugins.push(resolve())
 }
 
-module.exports = {
+const rollupConfig = {
   input: path.resolve(__dirname, '../js/src/uvigoweb.js'),
   output: {
     banner,
@@ -50,3 +51,5 @@ module.exports = {
   external,
   plugins
 }
+
+module.exports = rollupConfig
