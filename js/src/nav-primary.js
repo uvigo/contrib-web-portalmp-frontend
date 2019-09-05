@@ -27,18 +27,16 @@ const NavPrimary = (($) => {
     BUTTON : 'toggle-button',
     ACTIVE_NAVIGATION : 'activenavigation',
     MENU_ACTIVE: 'active',
-    MENU_ITEM: 'nav-item',
-    MENU_LINK: 'nav-link'
+    MENU_ITEM: 'nav-item'
   }
 
   const Selector = {
     DATA_TOGGLE        : '[data-toggle="togglenav"]',
     ACTIVE             : '.active',
     BUTTON             : '.toggle-button',
-    FIRST_LEVEL_MENU   : 'ul.nav > li.nav-item > a.nav-link',
-    FIRST_LEVEL        : 'ul.nav > li.nav-item',
-    MENU_ITEM          : '.nav-item',
-    MENU_LINK          : '.nav-link',
+    FIRST_LEVEL_MENU   : 'ul.nav > li.menu-item > a.nav-link',
+    FIRST_LEVEL        : 'ul.nav > li.menu-item',
+    MENU_ITEM          : '.menu-item', // antes .nav-item
     SUBMENU            : 'ul.sub-menu'
   }
 
