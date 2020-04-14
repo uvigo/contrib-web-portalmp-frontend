@@ -104,56 +104,113 @@ const Slider = (($) => {
         $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height())
       })
 
-      $slickGallery.slick({
-        slide: '.gallery-item',
-        appendArrows: $slickGallery.find('.gallery-item-slider-arrows'),
-        rows: 0
+
+      $slickGallery.each(function () {
+        const slider = $(this)
+        slider.slick({
+          slide: '.gallery-item',
+          appendArrows: slider.find('.gallery-item-slider-arrows'),
+          rows: 0
+        })
       })
+
 
       $('.gallery.gallery-columns-1').on('click', '.gallery-icon a', (event) => {
         event.preventDefault()
       })
 
-      $('.gallery.gallery-columns-1').on('click', '.gallery-icon', () => {
-        $('#galleryModal').modal()
+      $slickGallery.each(function () {
+        const $currentSlider = $(this)
 
-        const $slickGalleryModal = $('#galleryModal .gallery-modal')
+        $currentSlider.on('click', '.gallery-icon', (event) => {
+          const targetModalId = $(event.currentTarget).attr('target')
+          const $modalLayer = $(`#${targetModalId}`)
 
-        $('#galleryModal').on('shown.bs.modal', () => {
-          const currentSlide = $slickGallery.slick('slickCurrentSlide')
+          $modalLayer.modal()
 
-          $slickGalleryModal.on('afterChange', () => {
-            $slickGalleryModal.addClass('gallery-loaded')
+          const $slickGalleryModal = $(`#${targetModalId} .gallery-modal`)
+
+          $modalLayer.on('shown.bs.modal', () => {
+            const currentSlide = $currentSlider.slick('slickCurrentSlide')
+
+            $slickGalleryModal.on('afterChange', () => {
+              $slickGalleryModal.addClass('gallery-loaded')
+            })
+
+            if (!$slickGalleryModal.hasClass('slick-initialized')) {
+              $slickGalleryModal.on('init reInit afterChange', function (event, slick, currentSlide) {
+                const i = (currentSlide ? currentSlide : 0) + 1
+                $(this).find('.gallery-item-slider-counter span').text(`${i}/${slick.slideCount}`)
+              })
+
+              $slickGalleryModal.on('setPosition', function (event, slick) {
+                const height = slick.$slider.find('.slick-current .gallery-icon').height()
+                slick.$slider.find('.gallery-item-slider-controls').css('top', height)
+                $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height())
+              })
+
+              $slickGalleryModal.slick({
+                slide: '.gallery-item',
+                appendArrows: $(`#${targetModalId} .gallery-item-slider-arrows`),
+                rows: 0
+              })
+
+              $slickGalleryModal.slick('slickGoTo', currentSlide)
+            } else {
+              $slickGalleryModal.slick('slickGoTo', currentSlide)
+            }
           })
 
-          if (!$slickGalleryModal.hasClass('slick-initialized')) {
-            $slickGalleryModal.on('init reInit afterChange', function (event, slick, currentSlide) {
-              const i = (currentSlide ? currentSlide : 0) + 1
-              $(this).find('.gallery-item-slider-counter span').text(`${i}/${slick.slideCount}`)
-            })
-
-            $slickGalleryModal.on('setPosition', function (event, slick) {
-              const height = slick.$slider.find('.slick-current .gallery-icon').height()
-              slick.$slider.find('.gallery-item-slider-controls').css('top', height)
-              $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height())
-            })
-
-            $slickGalleryModal.slick({
-              slide: '.gallery-item',
-              appendArrows: $('#galleryModal .gallery-item-slider-arrows'),
-              rows: 0
-            })
-
-            $slickGalleryModal.slick('slickGoTo', currentSlide)
-          } else {
-            $slickGalleryModal.slick('slickGoTo', currentSlide)
-          }
-        })
-
-        $('#galleryModal').on('hidden.bs.modal', () => {
-          $slickGalleryModal.removeClass('gallery-loaded')
+          $modalLayer.on('hidden.bs.modal', () => {
+            $slickGalleryModal.removeClass('gallery-loaded')
+          })
         })
       })
+
+      // $('.gallery.gallery-columns-1').on('click', '.gallery-icon', () => {
+
+      //   $('#galleryModal').modal()
+
+      //   const $slickGalleryModal = $('#galleryModal .gallery-modal')
+
+      //   $('#galleryModal').on('shown.bs.modal', () => {
+      //     const currentSlide = $slickGallery.slick('slickCurrentSlide')
+
+      //     $slickGalleryModal.on('afterChange', () => {
+      //       $slickGalleryModal.addClass('gallery-loaded')
+      //     })
+
+      //     if (!$slickGalleryModal.hasClass('slick-initialized')) {
+      //       $slickGalleryModal.on('init reInit afterChange', function (event, slick, currentSlide) {
+      //         const i = (currentSlide ? currentSlide : 0) + 1
+      //         $(this).find('.gallery-item-slider-counter span').text(`${i}/${slick.slideCount}`)
+      //       })
+
+      //       $slickGalleryModal.on('setPosition', function (event, slick) {
+      //         const height = slick.$slider.find('.slick-current .gallery-icon').height()
+      //         slick.$slider.find('.gallery-item-slider-controls').css('top', height)
+      //         $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height())
+      //       })
+
+      //       $slickGalleryModal.slick({
+      //         slide: '.gallery-item',
+      //         appendArrows: $('#galleryModal .gallery-item-slider-arrows'),
+      //         rows: 0
+      //       })
+
+      //       $slickGalleryModal.slick('slickGoTo', currentSlide)
+
+      //     } else {
+
+      //       $slickGalleryModal.slick('slickGoTo', currentSlide)
+
+      //     }
+      //   })
+
+      //   $('#galleryModal').on('hidden.bs.modal', () => {
+      //     $slickGalleryModal.removeClass('gallery-loaded')
+      //   })
+      // })
     }
   }
 

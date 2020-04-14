@@ -1,26 +1,26 @@
 /*!
   * UVIGOWEB v1.2.0 (undefined)
-  * Copyright 2018-2019 [object Object]
+  * Copyright 2018-2020 [object Object]
   * Licensed under MIT (https://github.com/uvigo/contrib-web-portalmp-frontend/LICENSE)
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('slick-carousel'), require('jquery'), require('bootstrap/js/src/alert'), require('bootstrap/js/src/button'), require('bootstrap/js/src/carousel'), require('bootstrap/js/src/collapse'), require('bootstrap/js/src/dropdown'), require('bootstrap/js/src/modal'), require('bootstrap/js/src/util'), require('bootstrap/js/src/popover'), require('bootstrap/js/src/scrollspy'), require('bootstrap/js/src/tab'), require('bootstrap/js/src/tooltip')) :
   typeof define === 'function' && define.amd ? define(['exports', 'slick-carousel', 'jquery', 'bootstrap/js/src/alert', 'bootstrap/js/src/button', 'bootstrap/js/src/carousel', 'bootstrap/js/src/collapse', 'bootstrap/js/src/dropdown', 'bootstrap/js/src/modal', 'bootstrap/js/src/util', 'bootstrap/js/src/popover', 'bootstrap/js/src/scrollspy', 'bootstrap/js/src/tab', 'bootstrap/js/src/tooltip'], factory) :
   (global = global || self, factory(global.uvigoweb = {}, global.Slick, global.jQuery, global.alert, global.button, global.carousel, global.collapse, global.dropdown, global.modal, global.Util, global.popover, global.scrollspy, global.tab, global.tooltip));
-}(this, function (exports, slickCarousel, $, alert, button, carousel, collapse, dropdown, modal, Util, popover, scrollspy, tab, tooltip) { 'use strict';
+}(this, (function (exports, slickCarousel, $, alert, button, carousel, collapse, dropdown, modal, Util, popover, scrollspy, tab, tooltip) { 'use strict';
 
-  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
-  alert = alert && alert.hasOwnProperty('default') ? alert['default'] : alert;
-  button = button && button.hasOwnProperty('default') ? button['default'] : button;
-  carousel = carousel && carousel.hasOwnProperty('default') ? carousel['default'] : carousel;
-  collapse = collapse && collapse.hasOwnProperty('default') ? collapse['default'] : collapse;
-  dropdown = dropdown && dropdown.hasOwnProperty('default') ? dropdown['default'] : dropdown;
-  modal = modal && modal.hasOwnProperty('default') ? modal['default'] : modal;
-  Util = Util && Util.hasOwnProperty('default') ? Util['default'] : Util;
-  popover = popover && popover.hasOwnProperty('default') ? popover['default'] : popover;
-  scrollspy = scrollspy && scrollspy.hasOwnProperty('default') ? scrollspy['default'] : scrollspy;
-  tab = tab && tab.hasOwnProperty('default') ? tab['default'] : tab;
-  tooltip = tooltip && tooltip.hasOwnProperty('default') ? tooltip['default'] : tooltip;
+  $ = $ && Object.prototype.hasOwnProperty.call($, 'default') ? $['default'] : $;
+  alert = alert && Object.prototype.hasOwnProperty.call(alert, 'default') ? alert['default'] : alert;
+  button = button && Object.prototype.hasOwnProperty.call(button, 'default') ? button['default'] : button;
+  carousel = carousel && Object.prototype.hasOwnProperty.call(carousel, 'default') ? carousel['default'] : carousel;
+  collapse = collapse && Object.prototype.hasOwnProperty.call(collapse, 'default') ? collapse['default'] : collapse;
+  dropdown = dropdown && Object.prototype.hasOwnProperty.call(dropdown, 'default') ? dropdown['default'] : dropdown;
+  modal = modal && Object.prototype.hasOwnProperty.call(modal, 'default') ? modal['default'] : modal;
+  Util = Util && Object.prototype.hasOwnProperty.call(Util, 'default') ? Util['default'] : Util;
+  popover = popover && Object.prototype.hasOwnProperty.call(popover, 'default') ? popover['default'] : popover;
+  scrollspy = scrollspy && Object.prototype.hasOwnProperty.call(scrollspy, 'default') ? scrollspy['default'] : scrollspy;
+  tab = tab && Object.prototype.hasOwnProperty.call(tab, 'default') ? tab['default'] : tab;
+  tooltip = tooltip && Object.prototype.hasOwnProperty.call(tooltip, 'default') ? tooltip['default'] : tooltip;
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -72,13 +72,13 @@
       var source = arguments[i] != null ? arguments[i] : {};
 
       if (i % 2) {
-        ownKeys(source, true).forEach(function (key) {
+        ownKeys(Object(source), true).forEach(function (key) {
           _defineProperty(target, key, source[key]);
         });
       } else if (Object.getOwnPropertyDescriptors) {
         Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
       } else {
-        ownKeys(source).forEach(function (key) {
+        ownKeys(Object(source)).forEach(function (key) {
           Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
         });
       }
@@ -108,37 +108,34 @@
 
     var Default = {
       toggle: true,
-      duration: 300 // const DefaultType = {
-      //   toggle   : 'boolean',
-      //   duration : '(number|boolean)'
-      // }
+      duration: 300
+    }; // const DefaultType = {
+    //   toggle   : 'boolean',
+    //   duration : '(number|boolean)'
+    // }
 
-    };
     var Event = {
       SLIDEDOWN: "slidedown" + EVENT_KEY,
       SLIDEUP: "slideup" + EVENT_KEY,
-      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY // const ClassName = {
-      //   OPEN      : 'open',
-      //   CLOSED    : 'closed'
-      // }
+      CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
+    }; // const ClassName = {
+    //   OPEN      : 'open',
+    //   CLOSED    : 'closed'
+    // }
 
-    };
     var Selector = {
       FOOTER: '.uvigo-footer',
       TOGGLE_OPEN: '.toggle-open',
       TOGGLE_CLOSE: '.toggle-close',
       LAYER_TOGGLE: '.expanded-footer'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
     };
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-    var Footer =
-    /*#__PURE__*/
-    function () {
+    var Footer = /*#__PURE__*/function () {
       function Footer() {}
 
       // Public
@@ -254,17 +251,14 @@
       CLICK: "click" + EVENT_KEY + DATA_API_KEY,
       MOUSEENTER: "mouseenter" + EVENT_KEY + DATA_API_KEY,
       MOUSELEAVE: "mouseleave" + EVENT_KEY + DATA_API_KEY
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
     };
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-    var NavPrimary =
-    /*#__PURE__*/
-    function () {
+    var NavPrimary = /*#__PURE__*/function () {
       function NavPrimary(element, button) {
         // console.log('Call constructor')
         this._element = element;
@@ -562,17 +556,14 @@
     };
     var Event = {
       CLICK: "click" + EVENT_KEY + DATA_API_KEY
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
     };
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-    var Search =
-    /*#__PURE__*/
-    function () {
+    var Search = /*#__PURE__*/function () {
       function Search(element, button) {
         this._element = element;
         this._button = button;
@@ -738,37 +729,34 @@
 
     var Default = {
       toggle: true,
-      duration: 300 // const DefaultType = {
-      //   toggle   : 'boolean',
-      //   duration : '(number|boolean)'
-      // }
-      // const Event = {
-      //   SLIDEDOWN      : `slidedown${EVENT_KEY}`,
-      //   SLIDEUP        : `slideup${EVENT_KEY}`,
-      //   CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
-      // }
-      // const ClassName = {
-      //   OPEN      : 'open',
-      //   CLOSED    : 'closed'
-      // }
-      // const Selector = {
-      //   FOOTER       : '.uvigo-footer',
-      //   TOGGLE_OPEN  : '.toggle-open',
-      //   TOGGLE_CLOSE : '.toggle-close',
-      //   LAYER_TOGGLE : '.expanded-footer'
-      // }
+      duration: 300
+    }; // const DefaultType = {
+    //   toggle   : 'boolean',
+    //   duration : '(number|boolean)'
+    // }
+    // const Event = {
+    //   SLIDEDOWN      : `slidedown${EVENT_KEY}`,
+    //   SLIDEUP        : `slideup${EVENT_KEY}`,
+    //   CLICK_DATA_API : `click${EVENT_KEY}${DATA_API_KEY}`
+    // }
+    // const ClassName = {
+    //   OPEN      : 'open',
+    //   CLOSED    : 'closed'
+    // }
+    // const Selector = {
+    //   FOOTER       : '.uvigo-footer',
+    //   TOGGLE_OPEN  : '.toggle-open',
+    //   TOGGLE_CLOSE : '.toggle-close',
+    //   LAYER_TOGGLE : '.expanded-footer'
+    // }
 
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-    };
-
-    var Slider =
-    /*#__PURE__*/
-    function () {
+    var Slider = /*#__PURE__*/function () {
       function Slider() {}
 
       // Public
@@ -802,47 +790,86 @@
           slick.$slider.find('.gallery-item-slider-controls').css('top', height);
           $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height());
         });
-        $slickGallery.slick({
-          slide: '.gallery-item',
-          appendArrows: $slickGallery.find('.gallery-item-slider-arrows'),
-          rows: 0
+        $slickGallery.each(function () {
+          var slider = $(this);
+          slider.slick({
+            slide: '.gallery-item',
+            appendArrows: slider.find('.gallery-item-slider-arrows'),
+            rows: 0
+          });
         });
         $('.gallery.gallery-columns-1').on('click', '.gallery-icon a', function (event) {
           event.preventDefault();
         });
-        $('.gallery.gallery-columns-1').on('click', '.gallery-icon', function () {
-          $('#galleryModal').modal();
-          var $slickGalleryModal = $('#galleryModal .gallery-modal');
-          $('#galleryModal').on('shown.bs.modal', function () {
-            var currentSlide = $slickGallery.slick('slickCurrentSlide');
-            $slickGalleryModal.on('afterChange', function () {
-              $slickGalleryModal.addClass('gallery-loaded');
-            });
+        $slickGallery.each(function () {
+          var $currentSlider = $(this);
+          $currentSlider.on('click', '.gallery-icon', function (event) {
+            var targetModalId = $(event.currentTarget).attr('target');
+            var $modalLayer = $("#" + targetModalId);
+            $modalLayer.modal();
+            var $slickGalleryModal = $("#" + targetModalId + " .gallery-modal");
+            $modalLayer.on('shown.bs.modal', function () {
+              var currentSlide = $currentSlider.slick('slickCurrentSlide');
+              $slickGalleryModal.on('afterChange', function () {
+                $slickGalleryModal.addClass('gallery-loaded');
+              });
 
-            if (!$slickGalleryModal.hasClass('slick-initialized')) {
-              $slickGalleryModal.on('init reInit afterChange', function (event, slick, currentSlide) {
-                var i = (currentSlide ? currentSlide : 0) + 1;
-                $(this).find('.gallery-item-slider-counter span').text(i + "/" + slick.slideCount);
-              });
-              $slickGalleryModal.on('setPosition', function (event, slick) {
-                var height = slick.$slider.find('.slick-current .gallery-icon').height();
-                slick.$slider.find('.gallery-item-slider-controls').css('top', height);
-                $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height());
-              });
-              $slickGalleryModal.slick({
-                slide: '.gallery-item',
-                appendArrows: $('#galleryModal .gallery-item-slider-arrows'),
-                rows: 0
-              });
-              $slickGalleryModal.slick('slickGoTo', currentSlide);
-            } else {
-              $slickGalleryModal.slick('slickGoTo', currentSlide);
-            }
+              if (!$slickGalleryModal.hasClass('slick-initialized')) {
+                $slickGalleryModal.on('init reInit afterChange', function (event, slick, currentSlide) {
+                  var i = (currentSlide ? currentSlide : 0) + 1;
+                  $(this).find('.gallery-item-slider-counter span').text(i + "/" + slick.slideCount);
+                });
+                $slickGalleryModal.on('setPosition', function (event, slick) {
+                  var height = slick.$slider.find('.slick-current .gallery-icon').height();
+                  slick.$slider.find('.gallery-item-slider-controls').css('top', height);
+                  $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height());
+                });
+                $slickGalleryModal.slick({
+                  slide: '.gallery-item',
+                  appendArrows: $("#" + targetModalId + " .gallery-item-slider-arrows"),
+                  rows: 0
+                });
+                $slickGalleryModal.slick('slickGoTo', currentSlide);
+              } else {
+                $slickGalleryModal.slick('slickGoTo', currentSlide);
+              }
+            });
+            $modalLayer.on('hidden.bs.modal', function () {
+              $slickGalleryModal.removeClass('gallery-loaded');
+            });
           });
-          $('#galleryModal').on('hidden.bs.modal', function () {
-            $slickGalleryModal.removeClass('gallery-loaded');
-          });
-        });
+        }); // $('.gallery.gallery-columns-1').on('click', '.gallery-icon', () => {
+        //   $('#galleryModal').modal()
+        //   const $slickGalleryModal = $('#galleryModal .gallery-modal')
+        //   $('#galleryModal').on('shown.bs.modal', () => {
+        //     const currentSlide = $slickGallery.slick('slickCurrentSlide')
+        //     $slickGalleryModal.on('afterChange', () => {
+        //       $slickGalleryModal.addClass('gallery-loaded')
+        //     })
+        //     if (!$slickGalleryModal.hasClass('slick-initialized')) {
+        //       $slickGalleryModal.on('init reInit afterChange', function (event, slick, currentSlide) {
+        //         const i = (currentSlide ? currentSlide : 0) + 1
+        //         $(this).find('.gallery-item-slider-counter span').text(`${i}/${slick.slideCount}`)
+        //       })
+        //       $slickGalleryModal.on('setPosition', function (event, slick) {
+        //         const height = slick.$slider.find('.slick-current .gallery-icon').height()
+        //         slick.$slider.find('.gallery-item-slider-controls').css('top', height)
+        //         $(this).find('.gallery-item-slider-controls').css('top', $(this).find('.slick-current .gallery-icon').height())
+        //       })
+        //       $slickGalleryModal.slick({
+        //         slide: '.gallery-item',
+        //         appendArrows: $('#galleryModal .gallery-item-slider-arrows'),
+        //         rows: 0
+        //       })
+        //       $slickGalleryModal.slick('slickGoTo', currentSlide)
+        //     } else {
+        //       $slickGalleryModal.slick('slickGoTo', currentSlide)
+        //     }
+        //   })
+        //   $('#galleryModal').on('hidden.bs.modal', () => {
+        //     $slickGalleryModal.removeClass('gallery-loaded')
+        //   })
+        // })
       };
 
       _createClass(Slider, null, [{
@@ -921,17 +948,14 @@
     var Selector = {
       ACTIVE: '.active-headers',
       DATA_BEHAVIOUR: '[data-behaviour="table-responsive"]'
-      /**
-       * ------------------------------------------------------------------------
-       * Class Definition
-       * ------------------------------------------------------------------------
-       */
-
     };
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
 
-    var TableResponsive =
-    /*#__PURE__*/
-    function () {
+    var TableResponsive = /*#__PURE__*/function () {
       function TableResponsive(element, config) {
         this._config = this._getConfig(config);
         this._element = $(element)[0];
@@ -1091,5 +1115,5 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=uvigoweb.js.map
