@@ -1,3 +1,11 @@
+### 1.2.2: May 7th, 2020
+* Cambio de dependencia versión iconfont
+
+### 1.2.1: May 6th, 2020
+* Fixed node-sass version from audit.
+* Bug cuando hay más de una galería de imágenes.
+* Bug en componente Javascript Tab.
+
 ### 1.2.0: August 26th, 2019
 * Actualización de paquetes de compilación desarrollo.
 * Resolve vulnerabilities.

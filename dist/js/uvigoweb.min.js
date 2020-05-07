@@ -1,5 +1,5 @@
 /*!
-  * UVIGOWEB v1.2.0 (undefined)
+  * UVIGOWEB v1.2.2 (undefined)
   * Copyright 2018-2020 [object Object]
   * Licensed under MIT (https://github.com/uvigo/contrib-web-portalmp-frontend/LICENSE)
   */
