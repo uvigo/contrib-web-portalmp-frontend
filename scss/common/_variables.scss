@@ -975,8 +975,17 @@ $print-page-size:                   a3 !default;
 $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
 
-// Social
-$social-color-icon:                 $gray-100 !default;
+// Social icons
+$social-color-icon-light:           $gray-100 !default;
+$social-color-facebook-icon:      #3c5a95 !default;
+$social-color-twitter-icon:       #53ade9 !default;
+$social-color-youtube-icon:       #d01324 !default;
+$social-color-instagram-icon:     #0078b1 !default;
+$social-color-linkedin-icon:      #0078b1 !default;
+$social-color-appleu-icon:        #f00 !default;
+$social-color-whatsapp-icon:      #25d366 !default;
+$social-color-telegram-icon:      #08c !default;
+
 
 // Slick Slider
 $slick-font-path:                   "./fonts/" !default;
