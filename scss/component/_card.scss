@@ -29,6 +29,10 @@
   //     @include border-bottom-radius($card-border-radius);
   //   }
   // }
+
+  &.card-circle {
+    border: none;
+  }
 }
 
 .card-body {
@@ -44,10 +48,23 @@
   p + p {
     padding-top: 1.25rem;
   }
+
+  .card-circle & {
+    padding: 2.5rem 2.5rem;
+    text-align: center;
+  }
 }
 
 .card-title {
   // margin-bottom: $card-spacer-y;
+
+  .card-circle & {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: initial;
+  }
 }
 
 .card-subtitle {
@@ -139,6 +156,16 @@
   // width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
   // @include border-top-radius($card-inner-border-radius);
   height: auto;
+
+  .card-circle & {
+    display: block;
+    width: 220px;
+    height: 220px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 110px;
+    object-fit: cover;
+  }
 }
 
 .card-img-bottom {
