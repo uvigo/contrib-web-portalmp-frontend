@@ -83,3 +83,115 @@
 .featured__item__group {
   margin-bottom: 1.25rem;
 }
+
+.featured-announcements {
+  position: relative;
+  background-color: #eee;
+
+  .card {
+    background-color: inherit;
+    border: none;
+  }
+
+  .card-body {
+    padding: inherit;
+  }
+
+  .entry-meta {
+    line-height: 1rem;
+  }
+
+  .featured {
+    .featured__footer {
+      .btn {
+        position: absolute;
+        bottom: -1.3rem;
+      }
+    }
+  }
+
+  &__item {
+    time {
+      font-size: .875rem;
+      font-weight: $font-weight-normal;
+      color: #606060;
+    }
+
+    .featured__item__title {
+      min-height: 1rem;
+      font-size: 1.15rem;
+      font-weight: $font-weight-normal;
+      line-height: 1.4;
+      color: $primary;
+    }
+  }
+}
+
+.uvigo-featured-slider {
+  margin-bottom: 40px;
+
+  .slick-slider-featured {
+    margin-bottom: 40px;
+
+    .slick-slide {
+      margin: 0 ($grid-gutter-width / 2);
+    }
+
+    .slick-list {
+      margin: 0 -($grid-gutter-width / 2);
+    }
+
+    & + .featured__footer {
+      padding-top: 40px;
+      margin-right: 0;
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 0;
+      }
+    }
+
+    &.slick-dotted.slick-slider {
+      margin-bottom: 50px;
+    }
+
+    .slick-prev {
+      top: 0;
+      right: 40px;
+      left: auto;
+
+      &::before {
+        background-image: inline-svg("<svg version='1.1' xmlns='http://www.w3.org/2000/svg'><polyline fill='none' stroke='#{$slick-arrow-color}' stroke-width='2' points='24,49 1,25 24,1'/></svg>");
+        transform: scale(.6);
+      }
+
+      @include media-breakpoint-up(md) {
+        top: 50%;
+        right: auto;
+        left: -50px;
+
+        &::before {
+          transform: none;
+        }
+      }
+    }
+
+    .slick-next {
+      top: 0;
+      right: 0;
+
+      &::before {
+        background-image: inline-svg("<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'><polyline fill='none' stroke='#{$slick-arrow-color}' stroke-width='2' points='1,1 24,25 1,49 '/></svg>");
+        transform: scale(.6);
+      }
+
+      @include media-breakpoint-up(md) {
+        top: 50%;
+        right: -50px;
+
+        &::before {
+          transform: none;
+        }
+      }
+    }
+  }
+}
