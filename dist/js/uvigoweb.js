@@ -1,6 +1,6 @@
 /*!
   * UVIGOWEB v1.2.2 (undefined)
-  * Copyright 2018-2020 [object Object]
+  * Copyright 2018-2021 [object Object]
   * Licensed under MIT (https://github.com/uvigo/contrib-web-portalmp-frontend/LICENSE)
   */
 (function (global, factory) {
@@ -21,6 +21,44 @@
   scrollspy = scrollspy && Object.prototype.hasOwnProperty.call(scrollspy, 'default') ? scrollspy['default'] : scrollspy;
   tab = tab && Object.prototype.hasOwnProperty.call(tab, 'default') ? tab['default'] : tab;
   tooltip = tooltip && Object.prototype.hasOwnProperty.call(tooltip, 'default') ? tooltip['default'] : tooltip;
+
+  function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+
+      if (enumerableOnly) {
+        symbols = symbols.filter(function (sym) {
+          return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+      }
+
+      keys.push.apply(keys, symbols);
+    }
+
+    return keys;
+  }
+
+  function _objectSpread2(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i] != null ? arguments[i] : {};
+
+      if (i % 2) {
+        ownKeys(Object(source), true).forEach(function (key) {
+          _defineProperty(target, key, source[key]);
+        });
+      } else if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
+
+    return target;
+  }
 
   function _defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -51,40 +89,6 @@
     }
 
     return obj;
-  }
-
-  function ownKeys(object, enumerableOnly) {
-    var keys = Object.keys(object);
-
-    if (Object.getOwnPropertySymbols) {
-      var symbols = Object.getOwnPropertySymbols(object);
-      if (enumerableOnly) symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-      keys.push.apply(keys, symbols);
-    }
-
-    return keys;
-  }
-
-  function _objectSpread2(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i] != null ? arguments[i] : {};
-
-      if (i % 2) {
-        ownKeys(Object(source), true).forEach(function (key) {
-          _defineProperty(target, key, source[key]);
-        });
-      } else if (Object.getOwnPropertyDescriptors) {
-        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-      } else {
-        ownKeys(Object(source)).forEach(function (key) {
-          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-        });
-      }
-    }
-
-    return target;
   }
 
   /**
@@ -173,8 +177,8 @@
 
       _createClass(Footer, null, [{
         key: "VERSION",
-        // Getters
-        get: function get() {
+        get: // Getters
+        function get() {
           return VERSION;
         }
       }, {
@@ -874,8 +878,8 @@
 
       _createClass(Slider, null, [{
         key: "VERSION",
-        // Getters
-        get: function get() {
+        get: // Getters
+        function get() {
           return VERSION;
         }
       }, {
@@ -990,7 +994,7 @@
       ;
 
       _proto._getConfig = function _getConfig(config) {
-        config = _objectSpread2({}, Default, {}, config);
+        config = _objectSpread2(_objectSpread2({}, Default), config);
         Util.typeCheckConfig(NAME, config, DefaultType);
         return config;
       };
@@ -1004,10 +1008,10 @@
         return this.each(function () {
           var data = $(this).data(DATA_KEY);
 
-          var _config = _objectSpread2({}, Default, {}, $(this).data());
+          var _config = _objectSpread2(_objectSpread2({}, Default), $(this).data());
 
           if (typeof config === 'object') {
-            _config = _objectSpread2({}, _config, {}, config);
+            _config = _objectSpread2(_objectSpread2({}, _config), config);
           }
 
           var action = typeof config === 'string' ? config : _config.initTable;
