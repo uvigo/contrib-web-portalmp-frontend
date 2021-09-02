@@ -97,6 +97,40 @@
   }
 }
 
+//
+// Bloque para los widgets
+//
+
+.header-widgets {
+  display: flex;
+  align-items: center;
+
+  .widget_search {
+    h3 {
+      @extend .sr-only;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    display: flex;
+  }
+
+  .textwidget {
+    p {
+      margin-bottom: 0;
+      font-size: .75rem;
+      font-weight: 400;
+      color: $gray-500;
+    }
+  }
+}
+
+//
+// Enlaces de la barra superior
+
 .top-header-links {
   display: inline-flex;
   align-items: center;
@@ -133,32 +167,225 @@
   }
 }
 
-.header-widgets {
-  display: flex;
-  align-items: center;
+//
+// Enlaces del menu de la barra superior
 
-  .widget_search {
-    h3 {
-      @extend .sr-only;
+.top-header-menu-links {
+  display: block;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include media-breakpoint-up(lg) {
+    display: inline-flex;
+    height: $header-top-height;
+  }
+
+  .nav-link {
+    padding: initial;
+    color: inherit;
+  }
+
+  .menu-item {
+    padding: 0;
+    margin: 0 .5rem;
+    font-size: .75rem;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    .elegant-icon {
+      position: relative;
+      padding-left: 1.625rem;
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -(1.4375rem / 2);
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .sub-menu {
+    display: block;
+    background-color: $primary;
+    list-style-type: none;
+    padding: 0.375rem 0.5rem 0.375rem 0;
+    margin: 0;
+    z-index: 1000;
+
+    &:hover {
+      display: block;
+    }
+
+    .menu-item {
+      text-align: left;
+      margin: 0;
+
+      .nav-link {
+        padding: 0.5rem 0.75rem;
+        margin: 0;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+      border: 1px solid $white;
+    }
+  }
+
+  .menu-item-open {
+    display: none;
+    border: none;
+    padding: 0 0.25rem;
+    background: transparent;
+    color: $white;
+    font-size: 1.25rem;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+
+    &:active {
+      outline: none;
+      color: $secondary;
+    }
+
+    &:active + .sub-menu,
+    &:hover + .sub-menu {
+      display: block;
+
+      @include media-breakpoint-up(xl) {
+        display: inline-flex;
+      }
     }
   }
 
   @include media-breakpoint-up(lg) {
-    position: absolute;
-    top: 40px;
-    right: 20px;
-    display: flex;
+    .sub-menu {
+      position: absolute;
+    }
   }
 
-  .textwidget {
-    p {
-      margin-bottom: 0;
-      font-size: .75rem;
-      font-weight: 400;
-      color: $gray-500;
+  @include media-breakpoint-up(xl) {
+    .sub-menu {
+      position: static;
+      display: inline-flex;
+      align-items: center;
+      height: $header-top-height;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        display: inline-flex;
+      }
+
+      .menu-item {
+        text-align: center;
+        margin: 0 0.5rem;
+
+        .nav-link {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    .menu-item-open {
+      display: none;
     }
   }
 }
+
+//
+// Botón para menu de la barra superior
+
+.top-header-menu__toggle-button {
+  padding: 0 0 0 1.25rem;
+  margin: 0 .5rem;
+  font-size: .75rem;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    font-size: 1.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+//
+// Menú de la barra superior
+
+.top-header-menu {
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  height: auto;
+  background-color: $primary;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    background-color: transparent;
+  }
+
+  &.active {
+    position: absolute;
+    top: 30px;
+    right: -100px;
+    display: block;
+    width: 210px;
+    padding: 10px 15px 20px 15px;
+
+    .sub-menu {
+      padding: 0;
+    }
+
+    .menu-item {
+      margin: 0;
+      text-align: right;
+
+      .nav-link {
+        padding: .5rem .75rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .language-switcher {
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+      display: inline-flex;
+    }
+  }
+}
+
 
 /* stylelint-disable selector-no-qualifying-type  */
 

@@ -98,11 +98,20 @@
 
 .share-buttons {
   position: fixed;
+  top: auto;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10000;
   opacity: 0;
+
+  @include media-breakpoint-up(md) {
+    top: 500px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    top: 560px;
+  }
 
   &.visible {
     opacity: 1;
@@ -111,21 +120,35 @@
   .btn-share {
     display: none;
     width: 38px;
+    min-width: 10px;
     height: 38px;
     padding: 0;
     margin-bottom: 0;
+    text-align: center;
     background-color: $primary;
     outline: none;
+
+    &:hover {
+      background-color: $secondary;
+    }
+
     &:focus {
       background-color: $primary;
       border-color: $primary;
     }
+
     &::before {
-      top: 10px;
-      left: 9px;
-      font-size: 1.8rem;
+      // top: 10px;
+      // left: 9px;
+      // font-size: 1.8rem;
+      position: absolute;
+      top: 8px;
+      left: 7px;
+      font-size: 1.25rem;
+      color: $white;
     }
   }
+
   // .share-buttons-container {}
   .at-resp-share-element {
     .at-share-btn-elements {
@@ -136,15 +159,17 @@
     .at-share-btn {
       width: 20%;
       padding: 6px 2px 6px 2px;
-      margin: 0 0 0 0;
+      margin: 0;
       text-align: center;
       background-color: $gray-200;
       border-left: 1px solid #fff;
       outline: none;
       transition: all .1s;
+
       &:first-child {
         border-left: none;
       }
+
       &:hover,
       &:focus {
         background-color: $primary;
@@ -154,9 +179,11 @@
           fill: $white;
         }
       }
+
       .at-icon-wrapper {
         float: none;
       }
+
       .at-icon {
         fill: $secondary;
       }
